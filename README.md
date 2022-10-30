@@ -8,11 +8,13 @@ This project will provide a repository for information on creating homebrew vers
 
 [Hypseus Singe][HS] and an _Arduino_ [sketch](sketches/).  
 
-A Windows _hypseus_ binary is provided in _Releases_.
+[Arduino IDE][AI] to load sketch onto Board.  
+
+A Windows _hypseus_ binary with _USB serial_ support is provided in _Releases_.
 
 ## Hardware
 
-<img align="left" src="images/scoreboard.png">
+<a href="https://www.youtube.com/playlist?list=PLRLuhkf2c3OfWXBjaeWMZKH3ejyk8eOgZ"><img align="left" src="images/scoreboard.png"></a>
 
 The project uses serial communication with an _Arduino_ `Uno`, `Nano` or `Mega` driving `MAX7219`  
 8-Digit LED Display Controllers to power _7-segment LED_ character, or other _LED_, displays.
@@ -30,6 +32,8 @@ Required Arduino libraries:
 
 Easy to construct, it can be hand wired on a basic perfboard with LED sizes of your choosing. Be aware of the power consumption of the LEDs as largers displays will require that an exterior power source be implemented. Components can be _(DIP/DIL)_ through hole to enable easy soldering.
 
+Fabrication files can be found in [schematics](schematics/).  
+
 ![Schematic](schematics/schematic.png)
 
 #### Bill of Materials:
@@ -44,13 +48,18 @@ _<sub>See table below:</sub>_
 
 ![Calculator](images/calculator.png)
 
-It can also be built using the commonly available _8-Digit_ `MAX7219` modules:
+### Using prebuilt LED modules
+
+It can also be created using pre-built and commonly available _8-Digit_ `MAX7219` modules:
 
 [![Modules](images/module.png)](https://www.youtube.com/playlist?list=PLRLuhkf2c3OfWXBjaeWMZKH3ejyk8eOgZ) <img src="images/modulecon.png" width=240>
 
+See demonstration videos on image links above.
+
+
 ## Serial protocol
 
-The provided _sketch_ is coded for a `19200` baud rate on the Arduino side.  
+The provided _sketches_ are coded for a `19200` baud rate on the Arduino side.  
 _Baud rates_ should be adjusted to give the most reliable communication on your hardware. 
 
 Updates are communicated using a _three byte struct_ using _`writeBytes()`_:
@@ -147,6 +156,7 @@ Laserdisc Emulator.  __Any direct or indirect commercial use of the mark
 [RB5]: https://github.com/Rumblebelly5
 [HS]: https://github.com/DirtBagXon/hypseus-singe
 [DIS]: https://discord.gg/dgCsCfmRfJ
+[AI]: https://www.arduino.cc/en/software
 [LED]: http://wayoda.github.io/LedControl/pages/software
 [SL]: https://lucidar.me/en/serialib/cross-plateform-rs232-serial-library/
 [GNU General Public License]: http://www.gnu.org/licenses/gpl-3.0.en.html
