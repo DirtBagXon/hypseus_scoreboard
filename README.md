@@ -2,11 +2,13 @@
 
 This project will provide a repository for information on creating homebrew versions of the _hardware scoreboard_, to operate with the _Don Bluth_ Laserdisc Arcade games `Dragon's Lair`, `Space Ace` and `Thayer's Quest`, using [Hypseus Singe][HS]. Support for a `Space Ace` hardware _annunciator_ is also included. 
 
+The Hypseus `Singe Game` API also allows games to utilize this hardware. 
+
 <img src="images/arduino_hat.png" width=240>
 
 ## Software
 
-[Hypseus Singe][HS] and an _Arduino_ [sketch](sketches/).  
+[Hypseus Singe][HS] and an _Arduino/Esp32_ [sketch](sketches/).  
 
 [Arduino IDE][AI] to load sketch onto Board.  
 
@@ -16,12 +18,12 @@ A Windows _hypseus_ binary with _USB serial_ support is provided in _Releases_.
 
 <a href="https://www.youtube.com/playlist?list=PLRLuhkf2c3OfWXBjaeWMZKH3ejyk8eOgZ"><img align="left" src="images/scoreboard.png"></a>
 
-The project uses serial communication with an _Arduino_ `Uno`, `Nano` or `Mega` driving `MAX7219`  
+The project uses serial communication with an _Arduino_ Classic or _Esp32_ driving `MAX7219`  
 8-Digit LED Display Controllers to power _7-segment LED_ character, or other _LED_, displays.
 
-The Arduino _sketches_ provided demonstrate the serial communication (_using serialib_) between  
-_hypseus_ and the Arduino. These should be portable to other programmable microcontrollers able  
-to handle serial communication.
+The provided _sketches_ demonstrate the serial communication (_using serialib_) between _hypseus_  
+and the Arduino. These should be portable to other programmable microcontrollers able to handle  
+serial communication.
 
 Required Arduino libraries:  
 [LEDControl][LED]  
@@ -30,7 +32,7 @@ Required Arduino libraries:
 
 ### Hardware details and schematics
 
-Easy to construct, it can be hand wired on a basic perfboard with LED sizes of your choosing. Be aware of the power consumption of the LEDs as largers displays will require that an exterior power source be implemented. Components can be _(DIP/DIL)_ through hole to enable easy soldering.
+Easy to construct, it can be hand wired on a basic perfboard with LED sizes of your choosing. Be aware of the power consumption of the LEDs as larger displays will require that an exterior power source be implemented. Components can be _(DIP/DIL)_ through hole to enable easy soldering.
 
 Fabrication files can be found in [schematics](schematics/).  
 
@@ -38,7 +40,7 @@ Fabrication files can be found in [schematics](schematics/).
 
 #### Bill of Materials:
 
-* 1 &nbsp; &nbsp;- &nbsp;_Arduino Microcontroller [IC2]_
+* 1 &nbsp; &nbsp;- &nbsp;_Arduino/Esp32 Microcontroller [IC2]_
 * 16 &nbsp;- &nbsp;_7-Segment display **(common cathode)** [LED1 to 16]_
 * 2 &nbsp; &nbsp;- &nbsp;_MAX7219 [IC1 & IC3]_ 
 * 2 &nbsp; &nbsp;- &nbsp;_100nf capacitor [C6 - C7]_
