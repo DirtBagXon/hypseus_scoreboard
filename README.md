@@ -21,11 +21,9 @@ A Windows _hypseus_ binary with _USB serial_ support is provided in _Releases_.
 The project uses serial communication with an _Arduino_ Classic or _Esp32_ driving `MAX7219`  
 8-Digit LED Display Controllers to power _7-segment LED_ character, or other _LED_, displays.
 
-The provided _sketches_ demonstrate the serial communication (_using serialib_) between _hypseus_  
-and the Arduino. These should be portable to other programmable microcontrollers able to handle  
-serial communication.
+The provided _sketches_ demonstrate the serial communication (_using serialib_) between _hypseus_ and the Arduino. These should be portable to other programmable microcontrollers able to handle serial communication.
 
-Required Arduino libraries:  
+Required Arduino libraries: 
 [LEDControl][LED]  
 [SerialLib][SL]
 
@@ -56,7 +54,7 @@ It can also be created using pre-built and commonly available _8-Digit_ `MAX7219
 
 [![Modules](images/module.png)](https://www.youtube.com/playlist?list=PLRLuhkf2c3OfWXBjaeWMZKH3ejyk8eOgZ) <img src="images/modulecon.png" width=240>
 
-See demonstration videos on image links above.
+**See demonstration videos on image links above.**
 
 
 ## Serial protocol
@@ -131,8 +129,7 @@ Please share images of your projects and creations on the [Hypseus Discord][DIS]
 
 ## Credits
 
-A massive thanks goes out to [Rumblebelly5][RB5] for the inspiration, patience, schematics, hardware   
-itinerary and expertise on this project. Without them this project would not be possible.
+A massive thanks goes out to [Rumblebelly5][RB5] for the inspiration, patience, schematics, hardware itinerary and expertise on this project. Without them this project would not be possible.
 
 ## License
 
